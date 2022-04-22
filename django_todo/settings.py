@@ -76,11 +76,15 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://dwtaqirrjzpkwk:8e3a2e2008cd465a10c98a9c19ae5ff0cf1dc96720113421ec6210c96c9d260f@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/d9rg4dqnipp8iq')
 }
 
 # Password validation
